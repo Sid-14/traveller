@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@1&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    z-index: 10;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+.head {
+    position: fixed;
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5b78c7b7;
+    z-index: 100;
+}
+
+.head .logo h1 {
+    font-family: 'Jomhuria', cursive;
+    font-size: 51px;
+    font-weight: 100;
+    padding: 0px 17px 0 17px;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    line-height: 0.8;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    padding-right: 35px;
+}
+
+.navbar ul li a {
+    font-size: 17px;
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #617cc9d7;
+}
+
+.hero {
+    background: url('img/10751.jpg') center center/cover no-repeat;
+    width: 98vw;
+    height: calc(100vh - 50px);
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero h2 {
+    font-family: 'Jomhuria', cursive;
+    font-size: 65px;
+    line-height: 0.8;
+    font-weight: 100;
+}
+
+.hero p {
+    font-size: 17px;
+    font-family: 'Castoro', serif;
+    font-weight: 550;
+}
+
+.hero a {
+    margin-top: 10px;
+    padding: 5px 25px;
+    letter-spacing: 2px;
+    background-color: #5b78c7b7;
+    border-radius: 4px;
+}
+
+.hero a:hover {
+    background-color: #617cc9d7;
+    cursor: pointer;
+}
+
+.guide {
+    position: relative;
+    background-color: #eef1fa;
+}
+
+.guide h2 {
+    text-align: center;
+    font-family: 'Castoro', serif;
+    padding: 50px 0;
+    margin-top: 30px;
+    font-size: 40px;
+    word-spacing: 5px;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.cards {
+    margin-bottom: 50px;
+}
+
+.cards img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 6px 4px 8px #333;
+    margin-bottom: 10px;
+}
+
+.cards img:hover {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.cards a {
+    background-color: #dee2eed7;
+    padding: 3px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.middle .mid-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.mid-content {
+    width: 40%;
+}
+
+.mid-img img {
+    width: 70%;
+}
+
+.mid-content {
+    background-color: #99a8d16c;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 8px 4px 8px #333;
+}
+
+.mid-content h1 {
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.mid-content p {
+    margin-bottom: 15px;
+}
+
+.mid-content a {
+    background-color: rgba(99, 99, 194, 0.144);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.mid-content a:hover {
+    background-color: rgba(99, 99, 194, 0.082);
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #99a8d16c;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.footer .foot .foot-1 h3 {
+    font-family: 'Jomhuria', cursive;
+    font-size: 45px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.toggle-con {
+    display: none;
+}
+
+@media (max-width:1120px) {
+    .mid-img {
+        display: none;
+    }
+    .mid-content {
+        text-align: center;
+        width: 100vw;
+        border-right: none;
+        border-left: none;
+        margin: 0;
+        padding: 50px 120px;
+    }
+    @media (max-width:975px) {
+        .mid-content {
+            padding: 20px 40px;
+        }
+    }
+}
+
+@media (max-width:860px) {
+    .head {
+        display: none;
+    }
+    .toggle-con {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        background-color: #5b78c77e;
+        right: 15px;
+        top: 15px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        z-index: 100;
+    }
+    #close {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .toggle-con img {
+        filter: invert(100%);
+        width: 20px;
+        cursor: pointer;
+        padding-bottom: 0px;
+    }
+    .toggle-con .close img {
+        display: none;
+    }
+    i {
+        padding-bottom: 15px;
+        font-size: 17px;
+        z-index: 100;
+    }
+    .toggle-con .toggle ul {
+        display: none;
+    }
+    .last {
+        padding-bottom: 5px;
+    }
+}
