@@ -22,7 +22,6 @@ a {
 .head {
     position: fixed;
     width: 100vw;
-    height: 6vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -186,6 +185,7 @@ a {
     background-color: #99a8d16c;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .footer .foot {
@@ -196,15 +196,23 @@ a {
     flex-wrap: wrap;
 }
 
+.footer .foot-card {
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
 .footer .foot .foot-1 h3 {
     font-family: 'Jomhuria', cursive;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 100;
     letter-spacing: 1px;
 }
 
-.toggle-con {
-    display: none;
+@media (max-width:560px) {
+    .navbar ul li {
+        padding-right: 15px;
+        font-size: 70%;
+    }
 }
 
 @media (max-width:1120px) {
@@ -219,50 +227,31 @@ a {
         margin: 0;
         padding: 50px 120px;
     }
-    @media (max-width:975px) {
-        .mid-content {
-            padding: 20px 40px;
-        }
+}
+
+@media (max-width:975px) {
+    .mid-content {
+        padding: 20px 40px;
+    }
+    .footer .foot .foot-1 {
+        display: none;
+    }
+    .footer .foot h4 {
+        font-size: 17px;
+    }
+    .footer .foot a {
+        font-size: 15px;
     }
 }
 
-@media (max-width:860px) {
+@media (max-width:900px) {
+    .logo {
+        display: none;
+    }
     .head {
-        display: none;
+        display: inline-block;
     }
-    .toggle-con {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        background-color: #5b78c77e;
-        right: 15px;
-        top: 15px;
-        padding: 5px 10px;
-        border-radius: 4px;
-        z-index: 100;
-    }
-    #close {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .toggle-con img {
-        filter: invert(100%);
-        width: 20px;
-        cursor: pointer;
-        padding-bottom: 0px;
-    }
-    .toggle-con .close img {
-        display: none;
-    }
-    i {
-        padding-bottom: 15px;
-        font-size: 17px;
-        z-index: 100;
-    }
-    .toggle-con .toggle ul {
-        display: none;
-    }
-    .last {
-        padding-bottom: 5px;
+    .navbar ul {
+        justify-content: center;
     }
 }
